@@ -1,0 +1,5 @@
+<mat-grid-list class="container" cols="3" rowHeight="300px" gutterSize="16px">
+  <mat-grid-tile *ngFor="let course of filteredCourses">
+    <app-course-card [course]="course"></app-course-card>
+  </mat-grid-tile>
+</mat-grid-list>

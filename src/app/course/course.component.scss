@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+}
+
+mat-sidenav {
+  width: 250px;
+  position: fixed;
+}
+
+mat-sidenav-content {
+  margin-left: 250px;
+  padding: 16px;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}

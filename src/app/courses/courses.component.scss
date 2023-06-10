@@ -1,0 +1,14 @@
+mat-grid-list {
+  margin-top: 16px;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+app-course-card{
+  width:70%;
+}
