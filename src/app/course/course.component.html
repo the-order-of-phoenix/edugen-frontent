@@ -2,6 +2,7 @@
   <mat-sidenav opened mode="side">
     <app-topics-index
       (selectedTopicChange)="topic.handleSelectedTopic($event)"
+      [courseName]="course.name"
     ></app-topics-index>
   </mat-sidenav>
   <mat-sidenav-content position="start" style="height: 100%">

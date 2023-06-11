@@ -23,6 +23,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import { ToastrModule } from 'ngx-toastr';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
+    MatExpansionModule,
     ToastrModule.forRoot(),
   ],
   providers: [],

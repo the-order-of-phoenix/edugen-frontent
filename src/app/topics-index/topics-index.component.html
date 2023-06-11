@@ -1,6 +1,22 @@
-<mat-nav-list>
-  <h1 mat-subheader class="subheader">Modules</h1>
-  <mat-list-item *ngFor="let topic of topics" (click)="selectTopic(topic)">
-    {{ topic.name }}
-  </mat-list-item>
-</mat-nav-list>
+<mat-accordion>
+  <h1>
+    <span>{{ courseName }}</span>
+  </h1>
+  <mat-expansion-panel
+    *ngFor="let module of modules"
+    (opened)="panelOpened(module)"
+  >
+    <mat-expansion-panel-header>
+      {{ module.name }}
+    </mat-expansion-panel-header>
+    <mat-nav-list>
+      <a
+        mat-list-item
+        *ngFor="let topic of module.topics"
+        (click)="selectTopic(topic)"
+      >
+        {{ topic.topic }}
+      </a>
+    </mat-nav-list>
+  </mat-expansion-panel>
+</mat-accordion>

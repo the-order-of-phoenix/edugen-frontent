@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Course } from 'src/interfaces/course';
 import { Module } from 'src/interfaces/module';
 
 @Component({
@@ -9,6 +10,12 @@ import { Module } from 'src/interfaces/module';
 export class CourseComponent {
   isSidebarOpen = true;
   selectedTopic: Module|null=null;
+  course: Course = {
+    name: "Blockchain",
+    id: "1",
+    "description": "Course about blockchain",
+    "status": "SUCCESSFUL"
+  }
 
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;

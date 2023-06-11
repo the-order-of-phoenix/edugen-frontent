@@ -8,16 +8,16 @@ import { Topic } from 'src/interfaces/topic';
   styleUrls: ['./topic.component.scss']
 })
 export class TopicComponent {
-  selectedDocument !:Module;
+  selectedDocument !:Topic;
   documents: Topic[]=[
     {
       id: "1",
-      type: "text",
-      content: "some data"
+      topic: "some data",
+      text: "lorem ipsum"
     }
   ];
 
-  handleSelectedTopic(topic:Module){
+  handleSelectedTopic(topic:Topic){
     //TODO: call api get the appropriate document;
     this.selectedDocument = topic;
   }
