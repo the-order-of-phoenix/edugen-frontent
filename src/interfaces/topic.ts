@@ -1,4 +1,5 @@
-export interface Topic {
-  name: string;
-  id: string;
+export interface Topic{
+  id: string,
+  type: string,
+  content: string
 }

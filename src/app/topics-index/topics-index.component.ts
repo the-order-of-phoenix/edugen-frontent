@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
-import { Topic } from 'src/interfaces/topic';
+import { Module } from 'src/interfaces/module';
 
 
 @Component({
@@ -8,26 +8,44 @@ import { Topic } from 'src/interfaces/topic';
   styleUrls: ['./topics-index.component.scss']
 })
 export class TopicsIndexComponent {
-  @Output() selectedTopicChange: EventEmitter<Topic> = new EventEmitter<Topic>();
-  topics: Array<Topic>=[
+  @Output() selectedTopicChange: EventEmitter<Module> = new EventEmitter<Module>();
+  topics: Array<Module>=[
     {
       name: "harsheet",
-      id: "1"
+      id: "1",
+      topics: [
+
+      ]
     },
     {
-      name: "harsheet",
-      id: "2"
+      name: "harsheet2",
+      id: "2",
+      topics: [
+
+      ]
     },
     {
-      name: "harsheet",
-      id: "3"
+      name: "harsheet3",
+      id: "3",
+
+      topics: [
+
+      ]
     },
     {
-      name: "harsheet",
-      id: "4"
+      name: "harsheet4",
+      id: "4",
+      topics: [
+
+      ]
     },
   ];
-  selectTopic(topic: Topic){
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.selectedTopicChange.emit(this.topics[0])
+  }
+  selectTopic(topic: Module){
     this.selectedTopicChange.emit(topic)
   }
 

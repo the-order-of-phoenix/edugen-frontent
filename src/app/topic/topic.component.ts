@@ -1,6 +1,6 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
+import { Module } from 'src/interfaces/module';
 import { Topic } from 'src/interfaces/topic';
-import { TopicDocument } from 'src/interfaces/topic-document';
 
 @Component({
   selector: 'app-topic',
@@ -8,15 +8,17 @@ import { TopicDocument } from 'src/interfaces/topic-document';
   styleUrls: ['./topic.component.scss']
 })
 export class TopicComponent {
-  documents: TopicDocument[]=[
+  selectedDocument !:Module;
+  documents: Topic[]=[
     {
       id: "1",
       type: "text",
       content: "some data"
     }
   ];
-  handleSelectedTopic(topic:Topic){
-    //TODO: call api get the appropriate document;
 
+  handleSelectedTopic(topic:Module){
+    //TODO: call api get the appropriate document;
+    this.selectedDocument = topic;
   }
 }

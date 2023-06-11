@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Topic } from 'src/interfaces/topic';
+import { Module } from 'src/interfaces/module';
 
 @Component({
   selector: 'app-course',
@@ -8,7 +8,7 @@ import { Topic } from 'src/interfaces/topic';
 })
 export class CourseComponent {
   isSidebarOpen = true;
-  selectedTopic: Topic|null=null;
+  selectedTopic: Module|null=null;
 
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
